@@ -10,11 +10,12 @@
 
   <style>
     :root {
-      --primary: #0f172a;
-      --secondary: #1e293b;
+      --bg: #020617;
+      --card: #020617;
+      --primary: #e5e7eb;
+      --secondary: #94a3b8;
       --accent: #38bdf8;
-      --bg: #f8fafc;
-      --card: #ffffff;
+      --border: #1e293b;
     }
 
     * {
@@ -25,42 +26,45 @@
     body {
       margin: 0;
       font-family: 'Inter', sans-serif;
-      background: var(--bg);
-      color: #1f2937;
+      background: radial-gradient(circle at top, #020617, #000000);
+      color: var(--primary);
     }
 
     /* ---------- HEADER ---------- */
     header {
-      background: linear-gradient(135deg, #020617, #0f172a);
-      color: white;
-      padding: 70px 20px;
+      background: linear-gradient(135deg, #020617, #020617);
+      padding: 80px 20px;
       text-align: center;
+      border-bottom: 1px solid var(--border);
     }
 
     header h1 {
-      font-size: 38px;
+      font-size: 40px;
       margin-bottom: 10px;
+      color: #f8fafc;
     }
 
     .typing {
       color: var(--accent);
-      font-size: 20px;
+      font-size: 22px;
       height: 28px;
+      margin-bottom: 10px;
     }
 
     header p {
       margin: 6px 0;
-      opacity: 0.9;
+      color: var(--secondary);
     }
 
     /* ---------- SECTIONS ---------- */
     section {
       max-width: 1100px;
-      margin: 40px auto;
-      background: var(--card);
+      margin: 45px auto;
+      background: linear-gradient(180deg, #020617, #020617);
       padding: 35px;
       border-radius: 14px;
-      box-shadow: 0 10px 30px rgba(0,0,0,0.06);
+      border: 1px solid var(--border);
+      box-shadow: 0 0 0 1px rgba(56,189,248,0.04);
       opacity: 0;
       transform: translateY(40px);
       transition: all 0.6s ease;
@@ -73,26 +77,45 @@
 
     h2 {
       margin-top: 0;
-      color: var(--primary);
+      color: #f8fafc;
       border-left: 5px solid var(--accent);
       padding-left: 12px;
+      letter-spacing: 0.5px;
+    }
+
+    /* ---------- TERMINAL ---------- */
+    .terminal {
+      background: #000000;
+      color: #22c55e;
+      padding: 20px;
+      border-radius: 10px;
+      font-family: monospace;
+      margin-top: 20px;
+      font-size: 14px;
+      border: 1px solid #022c22;
+    }
+
+    .terminal span {
+      color: #38bdf8;
     }
 
     /* ---------- SKILLS ---------- */
     .skill {
-      margin-bottom: 15px;
+      margin-bottom: 18px;
     }
 
     .skill span {
       font-weight: 600;
       display: block;
       margin-bottom: 6px;
+      color: #e5e7eb;
     }
 
     .bar {
-      background: #e5e7eb;
+      background: #020617;
       border-radius: 20px;
       overflow: hidden;
+      border: 1px solid var(--border);
     }
 
     .fill {
@@ -106,11 +129,16 @@
     ul {
       line-height: 1.9;
       padding-left: 20px;
+      color: var(--secondary);
+    }
+
+    li {
+      margin-bottom: 6px;
     }
 
     /* ---------- LINKS ---------- */
     a {
-      color: #0284c7;
+      color: var(--accent);
       text-decoration: none;
       font-weight: 600;
     }
@@ -123,30 +151,15 @@
     footer {
       text-align: center;
       padding: 25px;
-      background: var(--primary);
-      color: white;
-      margin-top: 60px;
+      border-top: 1px solid var(--border);
+      color: var(--secondary);
       font-size: 14px;
-    }
-
-    /* ---------- TERMINAL BOX ---------- */
-    .terminal {
-      background: #020617;
-      color: #22c55e;
-      padding: 20px;
-      border-radius: 10px;
-      font-family: monospace;
-      margin-top: 20px;
-      font-size: 14px;
-    }
-
-    .terminal span {
-      color: #38bdf8;
+      margin-top: 70px;
     }
 
     @media (max-width: 600px) {
       header h1 {
-        font-size: 28px;
+        font-size: 30px;
       }
     }
   </style>
@@ -164,8 +177,8 @@
   <h2>About Me</h2>
   <p>
     Network Engineer with 3+ years of experience at iOPEX Technologies,
-    supporting EMEA and NAM clients. Strong expertise in cloud firewall
-    troubleshooting, secure connectivity, and minimizing downtime.
+    supporting EMEA and NAM clients. Expertise in firewall troubleshooting,
+    secure connectivity, and minimizing downtime in cloud environments.
   </p>
 
   <div class="terminal">
@@ -209,15 +222,15 @@
   <p><b>Assistant System Engineer – iOPEX Technologies</b></p>
   <ul>
     <li>Cloud firewall troubleshooting and incident resolution</li>
-    <li>Supported EMEA & NAM enterprise customers</li>
-    <li>Ensured secure VPN connectivity and minimal downtime</li>
-    <li>Proactive monitoring and root cause analysis</li>
+    <li>Supporting EMEA & NAM enterprise clients</li>
+    <li>Ensuring secure VPN connectivity</li>
+    <li>Proactive monitoring and RCA</li>
   </ul>
 
   <p><b>Intern – Put-At-Toe Technologies</b></p>
   <ul>
-    <li>Python scripting for Excel-to-SQL data migration</li>
-    <li>Backend automation and data validation</li>
+    <li>Python scripting for Excel-to-SQL migration</li>
+    <li>Automation & backend data processing</li>
   </ul>
 </section>
 
@@ -225,7 +238,7 @@
   <h2>Certifications & Learning</h2>
   <ul>
     <li>PCNSE</li>
-    <li>AWS Certified Cloud Practitioner (Training)</li>
+    <li>AWS Cloud Practitioner (Training)</li>
     <li>Linux Administration</li>
     <li>Network Automation with Python</li>
     <li>DevOps Fundamentals</li>
@@ -236,18 +249,18 @@
   <h2>Projects & Labs</h2>
   <ul>
     <li>TCP 3-Way Handshake Analysis using Wireshark</li>
-    <li>Firewall Rule Debugging & Packet Flow Analysis</li>
-    <li>Python-based Network Automation Scripts</li>
+    <li>Firewall Packet Flow & Rule Debugging</li>
+    <li>Python-Based Network Automation</li>
   </ul>
 </section>
 
 <section>
   <h2>Blog</h2>
   <p>
-    I share networking tutorials and real troubleshooting scenarios:
+    Networking tutorials & troubleshooting:
     <br><br>
     👉 <a href="https://networknotebook.blogspot.com" target="_blank">
-    Network Notebook
+      Network Notebook
     </a>
   </p>
 </section>
@@ -297,13 +310,13 @@
   }
   type();
 
-  /* Scroll Animation */
+  /* Scroll + Skill Animation */
   const sections = document.querySelectorAll("section");
   const observer = new IntersectionObserver(entries => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
         entry.target.classList.add("show");
-        entry.querySelectorAll(".fill").forEach(bar => {
+        entry.target.querySelectorAll(".fill").forEach(bar => {
           bar.style.width = bar.dataset.width;
         });
       }
